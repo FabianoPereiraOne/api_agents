@@ -8,6 +8,20 @@
       "when": 1751980217456,
       "tag": "0000_fantastic_gamora",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752065613455,
+      "tag": "0001_common_cammi",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752065661450,
+      "tag": "0002_shocking_thunderbolt",
+      "breakpoints": true
     }
   ]
 }

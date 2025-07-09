@@ -6,21 +6,24 @@ import {
   type ZodTypeProvider
 } from "fastify-type-provider-zod"
 import { env } from "./env.ts"
-import { RoomsRoutes } from "./routes/rooms.ts"
+import { CreateQuestion } from "./routes/create-question.ts"
+import { CreateRoom } from "./routes/create-room.ts"
+import { GetRoomQuestions } from "./routes/get-room-questions.ts"
+import { GetRooms } from "./routes/get-rooms.ts"
 
 const server = fastify().withTypeProvider<ZodTypeProvider>()
 
 server.register(fastifyCors, {
   origin: "*"
 })
-
 server.setSerializerCompiler(serializerCompiler)
 server.setValidatorCompiler(validatorCompiler)
 
-server.get("/health", () => {
-  return "ok"
-})
+server.get("/health", () => "ok")
 
-server.register(RoomsRoutes)
+server.register(GetRooms)
+server.register(CreateRoom)
+server.register(GetRoomQuestions)
+server.register(CreateQuestion)
 
 server.listen({ port: env.PORT })
