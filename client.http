@@ -34,9 +34,9 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 ###
 # Create Question
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/111179ed-6778-47da-3cb9-f8813aabe33b/questions
 Content-Type: application/json
 
 {
- "question":"Qual é sua cor favorita?"
+ "question":"oque é Angular  e sua diferença com React?"
 }
